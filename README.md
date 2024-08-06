@@ -2,7 +2,7 @@ HRMS Portal
 Overview
 The HRMS Portal is a comprehensive Human Resource Management System designed to streamline HR operations. It includes features for managing employee profiles, recruitment, candidate tracking, and project management. This application is built using Spring Boot, Hibernate, MySQL, and Angular.
 
--Table of Contents
+Table of Contents
 Features
 Technologies
 Installation
@@ -13,12 +13,10 @@ Contributing
 License
 Contact
 Features
-----------------------<>----------------------------------------
 Employee Management: Add, update, and delete employee profiles.
 Recruitment: Manage job postings and candidate applications.
 Candidate Tracking: Track candidate stages and manage profiles.
 Project Management: Manage ongoing projects and assign employees.
-----------------------<>---------------------------------------
 Technologies
 Backend:
 Spring Boot
@@ -31,7 +29,6 @@ Maven
 Testing:
 JUnit
 Mockito
-----------------------------------------------------------------
 Installation
 Prerequisites
 Java JDK 21: Ensure you have JDK 21 or higher installed.
