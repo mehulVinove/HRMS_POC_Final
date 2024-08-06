@@ -7,9 +7,8 @@ Postman
 Steps
 Clone the Repository
 
-git clone https://github.com/yourusername/your-repo.git
 
-cd your-repo
+cd {repo-url}
 Build the Project(for terminal)
 
 mvn clean install
