@@ -1,0 +1,12 @@
+/* src/components/Navbar.css */
+.navbar {
+    position: fixed; /* Fix the navbar to the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure it is above other content */
+    background-color: rgba(0, 0, 0, 0.7); /* Optional: background color for visibility */
+    margin: 0; /* Remove margin */
+    padding: 0; /* Remove padding */
+  }
+  

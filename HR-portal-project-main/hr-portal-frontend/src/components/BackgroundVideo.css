@@ -1,0 +1,69 @@
+/* src/components/BackgroundVideo.css */
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+  }
+
+.video-container {
+    /* position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden; */
+    position: absolute; /* Ensure the video is positioned correctly */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden;
+    z-index: -1;
+  }
+  
+  .video {
+    /* position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: -1; */
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translateX(-50%);
+    z-index: -1;
+
+  }
+  
+  .content {
+    
+    position: relative; /* Ensure content is above the video */
+    z-index: 1; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5); /* Optional: Add a dark overlay for better text readability */
+  }
+  .navbar {
+    position: relative; /* or fixed/absolute as needed */
+    width: 100%;
+    z-index: 1000; /* Ensure the navbar is above the video and content */
+    margin: 0;
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0.7); /* Optional: background color for visibility */
+  }

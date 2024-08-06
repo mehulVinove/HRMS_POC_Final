@@ -1,0 +1,115 @@
+2024-08-06T08:32:12.318+05:30  INFO 9068 --- [hrms] [restartedMain] o.s.boot.SpringApplication               : Starting SpringApplication v3.3.2 using Java 21.0.4 with PID 9068 (C:\Users\Mehul Shakya\.m2\repository\org\springframework\boot\spring-boot\3.3.2\spring-boot-3.3.2.jar started by Mehul Shakya in C:\Users\Mehul Shakya\Documents\HRMS(poc) proejct\hrms-main\hrms)
+2024-08-06T08:32:12.344+05:30  INFO 9068 --- [hrms] [restartedMain] o.s.boot.SpringApplication               : No active profile set, falling back to 1 default profile: "default"
+2024-08-06T08:32:12.781+05:30 ERROR 9068 --- [hrms] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+java.lang.IllegalArgumentException: Sources must not be empty
+	at org.springframework.util.Assert.notEmpty(Assert.java:381) ~[spring-core-6.1.11.jar:6.1.11]
+	at org.springframework.boot.SpringApplication.prepareContext(SpringApplication.java:430) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.SpringApplication.main(SpringApplication.java:1379) ~[spring-boot-3.3.2.jar:3.3.2]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.3.2.jar:3.3.2]
+
+2024-08-06T08:33:50.824+05:30  INFO 15152 --- [hrms] [restartedMain] o.s.boot.SpringApplication               : Starting SpringApplication v3.3.2 using Java 21.0.4 with PID 15152 (C:\Users\Mehul Shakya\.m2\repository\org\springframework\boot\spring-boot\3.3.2\spring-boot-3.3.2.jar started by Mehul Shakya in C:\Users\Mehul Shakya\Documents\HRMS(poc) proejct\hrms-main\hrms)
+2024-08-06T08:33:50.837+05:30  INFO 15152 --- [hrms] [restartedMain] o.s.boot.SpringApplication               : No active profile set, falling back to 1 default profile: "default"
+2024-08-06T08:33:51.263+05:30 ERROR 15152 --- [hrms] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+java.lang.IllegalArgumentException: Sources must not be empty
+	at org.springframework.util.Assert.notEmpty(Assert.java:381) ~[spring-core-6.1.11.jar:6.1.11]
+	at org.springframework.boot.SpringApplication.prepareContext(SpringApplication.java:430) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.SpringApplication.main(SpringApplication.java:1379) ~[spring-boot-3.3.2.jar:3.3.2]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.3.2.jar:3.3.2]
+
+2024-08-06T08:37:07.774+05:30  INFO 6172 --- [hrms] [restartedMain] c.example.hrPortal.hrms.HrmsApplication  : Starting HrmsApplication using Java 21.0.4 with PID 6172 (C:\Users\Mehul Shakya\Documents\HRMS(poc) proejct\hrms-main\hrms\target\classes started by Mehul Shakya in C:\Users\Mehul Shakya\Documents\HRMS(poc) proejct\hrms-main\hrms)
+2024-08-06T08:37:07.780+05:30  INFO 6172 --- [hrms] [restartedMain] c.example.hrPortal.hrms.HrmsApplication  : No active profile set, falling back to 1 default profile: "default"
+2024-08-06T08:37:07.895+05:30  INFO 6172 --- [hrms] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-08-06T08:37:07.896+05:30  INFO 6172 --- [hrms] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-08-06T08:37:09.406+05:30  INFO 6172 --- [hrms] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-06T08:37:09.571+05:30  INFO 6172 --- [hrms] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 144 ms. Found 3 JPA repository interfaces.
+2024-08-06T08:37:10.858+05:30  INFO 6172 --- [hrms] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
+2024-08-06T08:37:10.891+05:30  INFO 6172 --- [hrms] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-06T08:37:10.893+05:30  INFO 6172 --- [hrms] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-06T08:37:11.012+05:30  INFO 6172 --- [hrms] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-06T08:37:11.015+05:30  INFO 6172 --- [hrms] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3116 ms
+2024-08-06T08:37:11.243+05:30  INFO 6172 --- [hrms] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-08-06T08:37:11.897+05:30  INFO 6172 --- [hrms] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2b41fbf0
+2024-08-06T08:37:11.902+05:30  INFO 6172 --- [hrms] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-08-06T08:37:12.129+05:30  INFO 6172 --- [hrms] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-06T08:37:12.358+05:30  INFO 6172 --- [hrms] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-06T08:37:12.480+05:30  INFO 6172 --- [hrms] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-08-06T08:37:13.197+05:30  INFO 6172 --- [hrms] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-06T08:37:13.340+05:30  WARN 6172 --- [hrms] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-06T08:37:13.347+05:30  WARN 6172 --- [hrms] [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-08-06T08:37:14.719+05:30  INFO 6172 --- [hrms] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-06T08:37:14.790+05:30  INFO 6172 --- [hrms] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-06T08:37:15.407+05:30  WARN 6172 --- [hrms] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-06T08:37:16.132+05:30  INFO 6172 --- [hrms] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-08-06T08:37:16.182+05:30  INFO 6172 --- [hrms] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path '/'
+2024-08-06T08:37:16.204+05:30  INFO 6172 --- [hrms] [restartedMain] c.example.hrPortal.hrms.HrmsApplication  : Started HrmsApplication in 9.267 seconds (process running for 10.254)
+2024-08-06T08:37:25.495+05:30  INFO 6172 --- [hrms] [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-06T08:37:25.496+05:30  INFO 6172 --- [hrms] [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-08-06T08:37:25.501+05:30  INFO 6172 --- [hrms] [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2024-08-06T12:18:35.381+05:30  INFO 10844 --- [hrms] [restartedMain] o.s.boot.SpringApplication               : Starting SpringApplication v3.3.2 using Java 21.0.4 with PID 10844 (C:\Users\Mehul Shakya\.m2\repository\org\springframework\boot\spring-boot\3.3.2\spring-boot-3.3.2.jar started by Mehul Shakya in C:\Users\Mehul Shakya\Documents\HRMS(poc) proejct\hrms-main\hrms)
+2024-08-06T12:18:35.393+05:30  INFO 10844 --- [hrms] [restartedMain] o.s.boot.SpringApplication               : No active profile set, falling back to 1 default profile: "default"
+2024-08-06T12:18:35.803+05:30 ERROR 10844 --- [hrms] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+java.lang.IllegalArgumentException: Sources must not be empty
+	at org.springframework.util.Assert.notEmpty(Assert.java:381) ~[spring-core-6.1.11.jar:6.1.11]
+	at org.springframework.boot.SpringApplication.prepareContext(SpringApplication.java:430) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.SpringApplication.main(SpringApplication.java:1379) ~[spring-boot-3.3.2.jar:3.3.2]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.3.2.jar:3.3.2]
+
+2024-08-06T12:19:44.953+05:30  INFO 14260 --- [hrms] [restartedMain] o.s.boot.SpringApplication               : Starting SpringApplication v3.3.2 using Java 21.0.4 with PID 14260 (C:\Users\Mehul Shakya\.m2\repository\org\springframework\boot\spring-boot\3.3.2\spring-boot-3.3.2.jar started by Mehul Shakya in C:\Users\Mehul Shakya\Documents\HRMS(poc) proejct\hrms-main\hrms)
+2024-08-06T12:19:44.963+05:30  INFO 14260 --- [hrms] [restartedMain] o.s.boot.SpringApplication               : No active profile set, falling back to 1 default profile: "default"
+2024-08-06T12:19:45.375+05:30 ERROR 14260 --- [hrms] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+java.lang.IllegalArgumentException: Sources must not be empty
+	at org.springframework.util.Assert.notEmpty(Assert.java:381) ~[spring-core-6.1.11.jar:6.1.11]
+	at org.springframework.boot.SpringApplication.prepareContext(SpringApplication.java:430) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.SpringApplication.main(SpringApplication.java:1379) ~[spring-boot-3.3.2.jar:3.3.2]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.3.2.jar:3.3.2]
+
+2024-08-06T12:21:21.433+05:30  INFO 2360 --- [hrms] [restartedMain] c.example.hrPortal.hrms.HrmsApplication  : Starting HrmsApplication using Java 21.0.4 with PID 2360 (C:\Users\Mehul Shakya\Documents\HRMS(poc) proejct\hrms-main\hrms\target\classes started by Mehul Shakya in C:\Users\Mehul Shakya\Documents\HRMS(poc) proejct\hrms-main\hrms)
+2024-08-06T12:21:21.439+05:30  INFO 2360 --- [hrms] [restartedMain] c.example.hrPortal.hrms.HrmsApplication  : No active profile set, falling back to 1 default profile: "default"
+2024-08-06T12:21:21.548+05:30  INFO 2360 --- [hrms] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-08-06T12:21:21.549+05:30  INFO 2360 --- [hrms] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-08-06T12:21:23.140+05:30  INFO 2360 --- [hrms] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-06T12:21:23.295+05:30  INFO 2360 --- [hrms] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 129 ms. Found 3 JPA repository interfaces.
+2024-08-06T12:21:24.563+05:30  INFO 2360 --- [hrms] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
+2024-08-06T12:21:24.596+05:30  INFO 2360 --- [hrms] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-06T12:21:24.596+05:30  INFO 2360 --- [hrms] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-06T12:21:24.717+05:30  INFO 2360 --- [hrms] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-06T12:21:24.722+05:30  INFO 2360 --- [hrms] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3171 ms
+2024-08-06T12:21:24.940+05:30  INFO 2360 --- [hrms] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-08-06T12:21:25.632+05:30  INFO 2360 --- [hrms] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2b41fbf0
+2024-08-06T12:21:25.637+05:30  INFO 2360 --- [hrms] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-08-06T12:21:25.882+05:30  INFO 2360 --- [hrms] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-06T12:21:26.067+05:30  INFO 2360 --- [hrms] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-06T12:21:26.199+05:30  INFO 2360 --- [hrms] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-08-06T12:21:26.950+05:30  INFO 2360 --- [hrms] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-06T12:21:27.101+05:30  WARN 2360 --- [hrms] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-06T12:21:27.104+05:30  WARN 2360 --- [hrms] [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-08-06T12:21:28.582+05:30  INFO 2360 --- [hrms] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-06T12:21:28.659+05:30  INFO 2360 --- [hrms] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-06T12:21:29.258+05:30  WARN 2360 --- [hrms] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-06T12:21:29.962+05:30  INFO 2360 --- [hrms] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-08-06T12:21:30.030+05:30  INFO 2360 --- [hrms] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path '/'
+2024-08-06T12:21:30.059+05:30  INFO 2360 --- [hrms] [restartedMain] c.example.hrPortal.hrms.HrmsApplication  : Started HrmsApplication in 9.547 seconds (process running for 10.704)
+2024-08-06T12:21:38.918+05:30  INFO 2360 --- [hrms] [http-nio-8082-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-06T12:21:38.918+05:30  INFO 2360 --- [hrms] [http-nio-8082-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-08-06T12:21:38.921+05:30  INFO 2360 --- [hrms] [http-nio-8082-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-08-06T13:42:41.974+05:30  WARN 2360 --- [hrms] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m24s466ms290µs500ns).

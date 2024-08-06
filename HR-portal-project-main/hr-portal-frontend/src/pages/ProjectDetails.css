@@ -1,0 +1,13 @@
+/* src/components/ProjectDetails.css */
+.project-details {
+    color: rgb(255, 255, 255); /* Set text color to white */
+  }
+  
+  .project-details h2 {
+    font-weight: bold; /* Make the heading bold */
+  }
+  
+  .project-details p {
+    font-weight: bold; /* Make the paragraph text bold */
+  }
+  
