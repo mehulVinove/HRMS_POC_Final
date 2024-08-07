@@ -38,6 +38,7 @@ function MyNavbar() {
               </NavDropdown.Item> */}
             </NavDropdown>
             <Nav.Link href="/projects">Projects</Nav.Link>
+            <Nav.Link href="/candidates">Candidates</Nav.Link>
 
             <button
             className="navbar-toggler"
@@ -52,7 +53,7 @@ function MyNavbar() {
           </button>
 
           <Link className="btn btn-outline-light" to="/adduser">
-            Add Employee
+            Add Candidate
           </Link>
 
           </Nav>

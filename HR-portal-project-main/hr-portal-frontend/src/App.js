@@ -17,6 +17,7 @@ import MyNavbar from './components/common/MyNavbar';
 import CandidateDetails from './pages/CandidateDetails';
 import KanbanBoard from './components/KanbanBoard';
 import AddUser from './pages/AddUser';
+import CandidateList from './components/CandidateList';
 // function App() {
 //   return (
 
@@ -39,8 +40,10 @@ const App = () => (
       <Route path="/projects" element={<ProjectList />} />
       <Route path="/projects/:id" element={<ProjectDetails />} />
       <Route path="/emp-status" component={KanbanBoard} />
+      <Route path="/candidates" element={<CandidateList />} />
       <Route path="/candidates/:id" element={<CandidateDetails />} />
       <Route  path="/adduser" element={<AddUser />} />
+      
     </Routes>
   </Router>
 );

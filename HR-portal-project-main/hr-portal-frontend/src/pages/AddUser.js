@@ -19,15 +19,15 @@ export default function AddUser() {
 
   const onSubmit = async (e) => {
     e.preventDefault();
-    await axios.post("http://localhost:8082/api/", user);
-    navigate("/employees"); // Update the path to your employee list page
+    await axios.post("http://localhost:8082/api/candidates", user);
+    navigate("/candidates"); // Update the path to your employee list page
   };
 
   return (
     <div className="container">
       <div className="row">
         <div className="col-md-6 offset-md-3 border rounded p-4 mt-2 shadow">
-          <h2 className="text-center m-4">Register Employee</h2>
+          <h2 className="text-center m-4">Register Candidate</h2>
 
           <form onSubmit={(e) => onSubmit(e)}>
             <div className="mb-3">
