@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
 
 const CandidateList = () => {
   const [candidates, setCandidates] = useState([]);
   const [error, setError] = useState(null);
+  const [editId, setEditId] = useState(null);
+  const [interview1Status, setInterview1Status] = useState('');
+  const [interview2Status, setInterview2Status] = useState('');
+  const [status, setStatus] = useState('');
 
   useEffect(() => {
     axios.get('http://localhost:8082/api/candidates')
@@ -17,8 +20,44 @@ const CandidateList = () => {
       });
   }, []);
 
+  const handleEditClick = (id, currentStatus, interview1Status, interview2Status) => {
+    setEditId(id);
+    setStatus(currentStatus);
+    setInterview1Status(interview1Status);
+    setInterview2Status(interview2Status);
+  };
+
+  const handleStatusChange = (e) => {
+    setStatus(e.target.value);
+  };
+
+  const handleInterview1StatusChange = (e) => {
+    setInterview1Status(e.target.value);
+  };
+
+  const handleInterview2StatusChange = (e) => {
+    setInterview2Status(e.target.value);
+  };
+
+  const handleSave = (id) => {
+    axios.put(`http://localhost:8082/api/candidates/${id}`, {
+      status,
+      interview1Status,
+      interview2Status
+    })
+      .then(() => {
+        setCandidates(candidates.map(candidate => 
+          candidate.id === id ? { ...candidate, status, interview1Status, interview2Status } : candidate
+        ));
+        setEditId(null);
+      })
+      .catch(error => {
+        console.error('There was an error updating the candidate!', error);
+        setError('Failed to update candidate.');
+      });
+  };
+
   const handleDelete = (id) => {
-    // Implement delete logic here
     axios.delete(`http://localhost:8082/api/candidates/${id}`)
       .then(() => {
         setCandidates(candidates.filter(candidate => candidate.id !== id));
@@ -41,6 +80,7 @@ const CandidateList = () => {
             <th scope="col">Interview 1</th>
             <th scope="col">Interview 2</th>
             <th scope="col">Status</th>
+            <th scope="col">Action</th>
           </tr>
         </thead>
         <tbody>
@@ -48,20 +88,78 @@ const CandidateList = () => {
             <tr key={candidate.id}>
               <th scope="row">{index + 1}</th>
               <td>{candidate.name}</td>
-              <td>{candidate.username}</td>
-              <td>{candidate.email}</td>
               <td>
-                <Link to={`/candidates/${candidate.id}`} className="btn btn-primary mx-2">
-                  View
-                </Link>
-                <Link to={`/candidates/edit/${candidate.id}`} className="btn btn-outline-primary mx-2">
-                  Edit
-                </Link>
-                <button 
-                  className="btn btn-danger mx-2" 
-                  onClick={() => handleDelete(candidate.id)}>
-                  Delete
-                </button>
+                {editId === candidate.id ? (
+                  <select
+                    value={interview1Status}
+                    onChange={handleInterview1StatusChange}
+                    className="form-select"
+                  >
+                    <option value="Not Evaluated">Not Evaluated</option>
+                    <option value="Cleared">Cleared</option>
+                    <option value="Not Cleared">Not Cleared</option>
+                  </select>
+                ) : (
+                  candidate.interview1Status
+                )}
+              </td>
+              <td>
+                {editId === candidate.id ? (
+                  <select
+                    value={interview2Status}
+                    onChange={handleInterview2StatusChange}
+                    className="form-select"
+                  >
+                    <option value="Not Evaluated">Not Evaluated</option>
+                    <option value="Cleared">Cleared</option>
+                    <option value="Not Cleared">Not Cleared</option>
+                  </select>
+                ) : (
+                  candidate.interview2Status
+                )}
+              </td>
+              <td>
+                {editId === candidate.id ? (
+                  <select
+                    value={status}
+                    onChange={handleStatusChange}
+                    className="form-select"
+                  >
+                    <option value="Cleared">Cleared</option>
+                    <option value="Not Cleared">Not Cleared</option>
+                  </select>
+                ) : (
+                  candidate.status
+                )}
+              </td>
+              <td>
+                {editId === candidate.id ? (
+                  <>
+                    <button 
+                      className="btn btn-success mx-2" 
+                      onClick={() => handleSave(candidate.id)}>
+                      Save
+                    </button>
+                    <button 
+                      className="btn btn-secondary mx-2" 
+                      onClick={() => setEditId(null)}>
+                      Cancel
+                    </button>
+                  </>
+                ) : (
+                  <>
+                    <button 
+                      className="btn btn-primary mx-2" 
+                      onClick={() => handleEditClick(candidate.id, candidate.status, candidate.interview1Status, candidate.interview2Status)}>
+                      Edit
+                    </button>
+                    <button 
+                      className="btn btn-danger mx-2" 
+                      onClick={() => handleDelete(candidate.id)}>
+                      Delete
+                    </button>
+                  </>
+                )}
               </td>
             </tr>
           ))}

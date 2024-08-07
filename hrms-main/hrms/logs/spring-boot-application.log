@@ -567,3 +567,160 @@ Caused by: java.lang.Error: Unresolved compilation problem:
 2024-08-07T13:59:06.193+05:30  INFO 13624 --- [hrms] [http-nio-8082-exec-2] o.a.c.c.C.[Tomcat-4].[localhost].[/]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
 2024-08-07T13:59:06.194+05:30  INFO 13624 --- [hrms] [http-nio-8082-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
 2024-08-07T13:59:06.196+05:30  INFO 13624 --- [hrms] [http-nio-8082-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-08-07T14:00:05.139+05:30  WARN 13624 --- [hrms] [http-nio-8082-exec-5] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
+2024-08-07T14:00:05.153+05:30  WARN 13624 --- [hrms] [http-nio-8082-exec-6] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
+2024-08-07T14:19:10.702+05:30  INFO 13624 --- [hrms] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-08-07T14:19:10.717+05:30  INFO 13624 --- [hrms] [Thread-46] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-07T14:19:10.719+05:30  INFO 13624 --- [hrms] [Thread-46] com.zaxxer.hikari.HikariDataSource       : HikariPool-13 - Shutdown initiated...
+2024-08-07T14:19:10.727+05:30  INFO 13624 --- [hrms] [Thread-46] com.zaxxer.hikari.HikariDataSource       : HikariPool-13 - Shutdown completed.
+2024-08-07T14:19:10.887+05:30  INFO 13624 --- [hrms] [restartedMain] c.example.hrPortal.hrms.HrmsApplication  : Starting HrmsApplication using Java 21.0.4 with PID 13624 (C:\Users\Mehul Shakya\Documents\HRMS(poc) proejct\hrms-main\hrms\target\classes started by Mehul Shakya in C:\Users\Mehul Shakya\Documents\HRMS(poc) proejct\hrms-main\hrms)
+2024-08-07T14:19:10.888+05:30  INFO 13624 --- [hrms] [restartedMain] c.example.hrPortal.hrms.HrmsApplication  : No active profile set, falling back to 1 default profile: "default"
+2024-08-07T14:19:11.271+05:30  INFO 13624 --- [hrms] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-07T14:19:11.304+05:30  INFO 13624 --- [hrms] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 32 ms. Found 4 JPA repository interfaces.
+2024-08-07T14:19:11.456+05:30  INFO 13624 --- [hrms] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
+2024-08-07T14:19:11.459+05:30  INFO 13624 --- [hrms] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-07T14:19:11.466+05:30  INFO 13624 --- [hrms] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-07T14:19:11.504+05:30  INFO 13624 --- [hrms] [restartedMain] o.a.c.c.C.[Tomcat-4].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2024-08-07T14:19:11.507+05:30  INFO 13624 --- [hrms] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 613 ms
+2024-08-07T14:19:11.540+05:30  INFO 13624 --- [hrms] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-14 - Starting...
+2024-08-07T14:19:11.560+05:30  INFO 13624 --- [hrms] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-14 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5d64b2e3
+2024-08-07T14:19:11.560+05:30  INFO 13624 --- [hrms] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-14 - Start completed.
+2024-08-07T14:19:11.586+05:30  INFO 13624 --- [hrms] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-07T14:19:11.596+05:30  INFO 13624 --- [hrms] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-08-07T14:19:11.617+05:30  INFO 13624 --- [hrms] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-07T14:19:11.622+05:30  WARN 13624 --- [hrms] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-07T14:19:11.622+05:30  WARN 13624 --- [hrms] [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-08-07T14:19:11.788+05:30  INFO 13624 --- [hrms] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-07T14:19:11.808+05:30  INFO 13624 --- [hrms] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-07T14:19:12.116+05:30  WARN 13624 --- [hrms] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-07T14:19:12.289+05:30  INFO 13624 --- [hrms] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-08-07T14:19:12.306+05:30  INFO 13624 --- [hrms] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path '/'
+2024-08-07T14:19:12.321+05:30  INFO 13624 --- [hrms] [restartedMain] c.example.hrPortal.hrms.HrmsApplication  : Started HrmsApplication in 1.489 seconds (process running for 19137.976)
+2024-08-07T14:19:12.326+05:30  INFO 13624 --- [hrms] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-08-07T14:20:29.768+05:30  INFO 13624 --- [hrms] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-08-07T14:20:29.781+05:30  INFO 13624 --- [hrms] [Thread-53] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-07T14:20:29.784+05:30  INFO 13624 --- [hrms] [Thread-53] com.zaxxer.hikari.HikariDataSource       : HikariPool-14 - Shutdown initiated...
+2024-08-07T14:20:29.795+05:30  INFO 13624 --- [hrms] [Thread-53] com.zaxxer.hikari.HikariDataSource       : HikariPool-14 - Shutdown completed.
+2024-08-07T14:20:29.939+05:30  INFO 13624 --- [hrms] [restartedMain] c.example.hrPortal.hrms.HrmsApplication  : Starting HrmsApplication using Java 21.0.4 with PID 13624 (C:\Users\Mehul Shakya\Documents\HRMS(poc) proejct\hrms-main\hrms\target\classes started by Mehul Shakya in C:\Users\Mehul Shakya\Documents\HRMS(poc) proejct\hrms-main\hrms)
+2024-08-07T14:20:29.941+05:30  INFO 13624 --- [hrms] [restartedMain] c.example.hrPortal.hrms.HrmsApplication  : No active profile set, falling back to 1 default profile: "default"
+2024-08-07T14:20:30.355+05:30  INFO 13624 --- [hrms] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-07T14:20:30.395+05:30  INFO 13624 --- [hrms] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 34 ms. Found 4 JPA repository interfaces.
+2024-08-07T14:20:30.571+05:30  INFO 13624 --- [hrms] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
+2024-08-07T14:20:30.576+05:30  INFO 13624 --- [hrms] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-07T14:20:30.580+05:30  INFO 13624 --- [hrms] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-07T14:20:30.630+05:30  INFO 13624 --- [hrms] [restartedMain] o.a.c.c.C.[Tomcat-4].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2024-08-07T14:20:30.638+05:30  INFO 13624 --- [hrms] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 693 ms
+2024-08-07T14:20:30.682+05:30  INFO 13624 --- [hrms] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-15 - Starting...
+2024-08-07T14:20:30.714+05:30  INFO 13624 --- [hrms] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-15 - Added connection com.mysql.cj.jdbc.ConnectionImpl@716f7e0f
+2024-08-07T14:20:30.714+05:30  INFO 13624 --- [hrms] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-15 - Start completed.
+2024-08-07T14:20:30.748+05:30  INFO 13624 --- [hrms] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-07T14:20:30.755+05:30  INFO 13624 --- [hrms] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-08-07T14:20:30.779+05:30  INFO 13624 --- [hrms] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-07T14:20:30.785+05:30  WARN 13624 --- [hrms] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-07T14:20:30.786+05:30  WARN 13624 --- [hrms] [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-08-07T14:20:31.064+05:30  INFO 13624 --- [hrms] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-07T14:20:31.079+05:30  INFO 13624 --- [hrms] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-07T14:20:31.326+05:30  WARN 13624 --- [hrms] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-07T14:20:31.466+05:30  INFO 13624 --- [hrms] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-08-07T14:20:31.479+05:30  INFO 13624 --- [hrms] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path '/'
+2024-08-07T14:20:31.484+05:30  INFO 13624 --- [hrms] [restartedMain] c.example.hrPortal.hrms.HrmsApplication  : Started HrmsApplication in 1.593 seconds (process running for 19217.138)
+2024-08-07T14:20:31.488+05:30  INFO 13624 --- [hrms] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-08-07T14:30:42.857+05:30  INFO 13624 --- [hrms] [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat-4].[localhost].[/]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-07T14:30:42.858+05:30  INFO 13624 --- [hrms] [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-08-07T14:30:42.859+05:30  INFO 13624 --- [hrms] [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-08-07T14:46:52.219+05:30  INFO 13624 --- [hrms] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-08-07T14:46:52.234+05:30  INFO 13624 --- [hrms] [Thread-57] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-07T14:46:52.235+05:30  INFO 13624 --- [hrms] [Thread-57] com.zaxxer.hikari.HikariDataSource       : HikariPool-15 - Shutdown initiated...
+2024-08-07T14:46:52.244+05:30  INFO 13624 --- [hrms] [Thread-57] com.zaxxer.hikari.HikariDataSource       : HikariPool-15 - Shutdown completed.
+2024-08-07T14:46:52.414+05:30  INFO 13624 --- [hrms] [restartedMain] c.example.hrPortal.hrms.HrmsApplication  : Starting HrmsApplication using Java 21.0.4 with PID 13624 (C:\Users\Mehul Shakya\Documents\HRMS(poc) proejct\hrms-main\hrms\target\classes started by Mehul Shakya in C:\Users\Mehul Shakya\Documents\HRMS(poc) proejct\hrms-main\hrms)
+2024-08-07T14:46:52.415+05:30  INFO 13624 --- [hrms] [restartedMain] c.example.hrPortal.hrms.HrmsApplication  : No active profile set, falling back to 1 default profile: "default"
+2024-08-07T14:46:52.896+05:30  INFO 13624 --- [hrms] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-07T14:46:52.933+05:30  INFO 13624 --- [hrms] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 35 ms. Found 4 JPA repository interfaces.
+2024-08-07T14:46:53.110+05:30  INFO 13624 --- [hrms] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
+2024-08-07T14:46:53.115+05:30  INFO 13624 --- [hrms] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-07T14:46:53.120+05:30  INFO 13624 --- [hrms] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-07T14:46:53.173+05:30  INFO 13624 --- [hrms] [restartedMain] o.a.c.c.C.[Tomcat-4].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2024-08-07T14:46:53.180+05:30  INFO 13624 --- [hrms] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 759 ms
+2024-08-07T14:46:53.214+05:30  INFO 13624 --- [hrms] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-16 - Starting...
+2024-08-07T14:46:53.240+05:30  INFO 13624 --- [hrms] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-16 - Added connection com.mysql.cj.jdbc.ConnectionImpl@24f72b2e
+2024-08-07T14:46:53.253+05:30  INFO 13624 --- [hrms] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-16 - Start completed.
+2024-08-07T14:46:53.274+05:30  INFO 13624 --- [hrms] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-07T14:46:53.281+05:30  INFO 13624 --- [hrms] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-08-07T14:46:53.400+05:30  INFO 13624 --- [hrms] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-07T14:46:53.405+05:30  WARN 13624 --- [hrms] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-07T14:46:53.405+05:30  WARN 13624 --- [hrms] [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-08-07T14:46:53.875+05:30  INFO 13624 --- [hrms] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-07T14:46:53.891+05:30  INFO 13624 --- [hrms] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-07T14:46:54.107+05:30  WARN 13624 --- [hrms] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-07T14:46:54.225+05:30  INFO 13624 --- [hrms] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-08-07T14:46:54.237+05:30  INFO 13624 --- [hrms] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path '/'
+2024-08-07T14:46:54.241+05:30  INFO 13624 --- [hrms] [restartedMain] c.example.hrPortal.hrms.HrmsApplication  : Started HrmsApplication in 1.9 seconds (process running for 20799.896)
+2024-08-07T14:46:54.245+05:30  INFO 13624 --- [hrms] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-08-07T14:47:55.485+05:30  INFO 13624 --- [hrms] [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat-4].[localhost].[/]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-07T14:47:55.486+05:30  INFO 13624 --- [hrms] [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-08-07T14:47:55.488+05:30  INFO 13624 --- [hrms] [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-08-07T14:48:00.875+05:30  WARN 13624 --- [hrms] [http-nio-8082-exec-9] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
+2024-08-07T14:48:00.903+05:30  WARN 13624 --- [hrms] [http-nio-8082-exec-10] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
+2024-08-07T14:58:27.663+05:30  WARN 13624 --- [hrms] [http-nio-8082-exec-3] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'PUT' is not supported]
+2024-08-07T14:59:51.849+05:30  INFO 13624 --- [hrms] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications)
+2024-08-07T14:59:51.859+05:30  INFO 13624 --- [hrms] [Thread-61] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-07T14:59:51.860+05:30  INFO 13624 --- [hrms] [Thread-61] com.zaxxer.hikari.HikariDataSource       : HikariPool-16 - Shutdown initiated...
+2024-08-07T14:59:51.868+05:30  INFO 13624 --- [hrms] [Thread-61] com.zaxxer.hikari.HikariDataSource       : HikariPool-16 - Shutdown completed.
+2024-08-07T14:59:52.010+05:30  INFO 13624 --- [hrms] [restartedMain] c.example.hrPortal.hrms.HrmsApplication  : Starting HrmsApplication using Java 21.0.4 with PID 13624 (C:\Users\Mehul Shakya\Documents\HRMS(poc) proejct\hrms-main\hrms\target\classes started by Mehul Shakya in C:\Users\Mehul Shakya\Documents\HRMS(poc) proejct\hrms-main\hrms)
+2024-08-07T14:59:52.010+05:30  INFO 13624 --- [hrms] [restartedMain] c.example.hrPortal.hrms.HrmsApplication  : No active profile set, falling back to 1 default profile: "default"
+2024-08-07T14:59:52.393+05:30  INFO 13624 --- [hrms] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-07T14:59:52.427+05:30  INFO 13624 --- [hrms] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 35 ms. Found 4 JPA repository interfaces.
+2024-08-07T14:59:52.577+05:30  INFO 13624 --- [hrms] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
+2024-08-07T14:59:52.579+05:30  INFO 13624 --- [hrms] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-07T14:59:52.580+05:30  INFO 13624 --- [hrms] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-07T14:59:52.638+05:30  INFO 13624 --- [hrms] [restartedMain] o.a.c.c.C.[Tomcat-4].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2024-08-07T14:59:52.639+05:30  INFO 13624 --- [hrms] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 624 ms
+2024-08-07T14:59:52.696+05:30  INFO 13624 --- [hrms] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-17 - Starting...
+2024-08-07T14:59:52.722+05:30  INFO 13624 --- [hrms] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-17 - Added connection com.mysql.cj.jdbc.ConnectionImpl@766a32f6
+2024-08-07T14:59:52.723+05:30  INFO 13624 --- [hrms] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-17 - Start completed.
+2024-08-07T14:59:52.748+05:30  INFO 13624 --- [hrms] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-07T14:59:52.760+05:30  INFO 13624 --- [hrms] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-08-07T14:59:52.787+05:30  INFO 13624 --- [hrms] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-07T14:59:52.792+05:30  WARN 13624 --- [hrms] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-07T14:59:52.792+05:30  WARN 13624 --- [hrms] [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-08-07T14:59:52.992+05:30  INFO 13624 --- [hrms] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-07T14:59:53.008+05:30  INFO 13624 --- [hrms] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-07T14:59:53.234+05:30  WARN 13624 --- [hrms] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-07T14:59:53.350+05:30  INFO 13624 --- [hrms] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-08-07T14:59:53.362+05:30  INFO 13624 --- [hrms] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path '/'
+2024-08-07T14:59:53.370+05:30  INFO 13624 --- [hrms] [restartedMain] c.example.hrPortal.hrms.HrmsApplication  : Started HrmsApplication in 1.406 seconds (process running for 21579.025)
+2024-08-07T14:59:53.374+05:30  INFO 13624 --- [hrms] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-08-07T15:00:12.321+05:30  INFO 13624 --- [hrms] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-08-07T15:00:12.331+05:30  INFO 13624 --- [hrms] [Thread-65] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-07T15:00:12.332+05:30  INFO 13624 --- [hrms] [Thread-65] com.zaxxer.hikari.HikariDataSource       : HikariPool-17 - Shutdown initiated...
+2024-08-07T15:00:12.341+05:30  INFO 13624 --- [hrms] [Thread-65] com.zaxxer.hikari.HikariDataSource       : HikariPool-17 - Shutdown completed.
+2024-08-07T15:00:12.492+05:30  INFO 13624 --- [hrms] [restartedMain] c.example.hrPortal.hrms.HrmsApplication  : Starting HrmsApplication using Java 21.0.4 with PID 13624 (C:\Users\Mehul Shakya\Documents\HRMS(poc) proejct\hrms-main\hrms\target\classes started by Mehul Shakya in C:\Users\Mehul Shakya\Documents\HRMS(poc) proejct\hrms-main\hrms)
+2024-08-07T15:00:12.492+05:30  INFO 13624 --- [hrms] [restartedMain] c.example.hrPortal.hrms.HrmsApplication  : No active profile set, falling back to 1 default profile: "default"
+2024-08-07T15:00:12.776+05:30  INFO 13624 --- [hrms] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-07T15:00:12.806+05:30  INFO 13624 --- [hrms] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 29 ms. Found 4 JPA repository interfaces.
+2024-08-07T15:00:12.957+05:30  INFO 13624 --- [hrms] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
+2024-08-07T15:00:12.962+05:30  INFO 13624 --- [hrms] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-07T15:00:12.965+05:30  INFO 13624 --- [hrms] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-07T15:00:12.997+05:30  INFO 13624 --- [hrms] [restartedMain] o.a.c.c.C.[Tomcat-4].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2024-08-07T15:00:12.997+05:30  INFO 13624 --- [hrms] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 500 ms
+2024-08-07T15:00:13.024+05:30  INFO 13624 --- [hrms] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-18 - Starting...
+2024-08-07T15:00:13.046+05:30  INFO 13624 --- [hrms] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-18 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6a6d6c0b
+2024-08-07T15:00:13.046+05:30  INFO 13624 --- [hrms] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-18 - Start completed.
+2024-08-07T15:00:13.068+05:30  INFO 13624 --- [hrms] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-07T15:00:13.077+05:30  INFO 13624 --- [hrms] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-08-07T15:00:13.100+05:30  INFO 13624 --- [hrms] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-07T15:00:13.105+05:30  WARN 13624 --- [hrms] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-07T15:00:13.106+05:30  WARN 13624 --- [hrms] [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-08-07T15:00:13.271+05:30  INFO 13624 --- [hrms] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-07T15:00:13.286+05:30  INFO 13624 --- [hrms] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-07T15:00:13.509+05:30  WARN 13624 --- [hrms] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-07T15:00:13.613+05:30  INFO 13624 --- [hrms] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-08-07T15:00:13.629+05:30  INFO 13624 --- [hrms] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path '/'
+2024-08-07T15:00:13.635+05:30  INFO 13624 --- [hrms] [restartedMain] c.example.hrPortal.hrms.HrmsApplication  : Started HrmsApplication in 1.196 seconds (process running for 21599.289)
+2024-08-07T15:00:13.639+05:30  INFO 13624 --- [hrms] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-08-07T15:00:17.167+05:30  INFO 13624 --- [hrms] [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat-4].[localhost].[/]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-07T15:00:17.167+05:30  INFO 13624 --- [hrms] [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-08-07T15:00:17.168+05:30  INFO 13624 --- [hrms] [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-08-07T15:00:17.174+05:30  WARN 13624 --- [hrms] [http-nio-8082-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'PUT' is not supported]
+2024-08-07T15:02:22.222+05:30  WARN 13624 --- [hrms] [http-nio-8082-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
+2024-08-07T15:02:22.237+05:30  WARN 13624 --- [hrms] [http-nio-8082-exec-3] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]

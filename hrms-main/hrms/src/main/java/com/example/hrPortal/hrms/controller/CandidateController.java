@@ -44,4 +44,16 @@ public class CandidateController {
 	        }
 	    }
 	    
+	    @PutMapping("/{id}")
+	    public ResponseEntity<Candidate> updateCandidate(@PathVariable Long id, @RequestBody Candidate candidate) {
+	        Candidate existingCandidate = candidateService.getCandidateById(id);
+	        if (existingCandidate != null) {
+	            candidate.setId(id);
+	            Candidate updatedCandidate = candidateService.saveCandidate(candidate);
+	            return ResponseEntity.ok(updatedCandidate);
+	        } else {
+	            return ResponseEntity.notFound().build();
+	        }
+	    }
+	    
 }
