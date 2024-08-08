@@ -19,6 +19,7 @@ import KanbanBoard from './components/KanbanBoard';
 import AddUser from './pages/AddUser';
 import CandidateList from './components/CandidateList';
 import EditCandidate from './components/EditCandidate';
+import AddEmployee from './components/AddEmployee';
 // function App() {
 //   return (
 
@@ -45,6 +46,8 @@ const App = () => (
       <Route path="/candidates/:id" element={<CandidateDetails />} />
       <Route  path="/adduser" element={<AddUser />} />
       <Route path="/candidates/edit/:id" component={EditCandidate} />
+      <Route path="/add-employee" element={<AddEmployee />} />
+
       
     </Routes>
   </Router>

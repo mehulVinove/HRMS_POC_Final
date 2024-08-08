@@ -15,6 +15,22 @@ public class Candidate {
 	    private String name;
 	    private String position;
 	    private String status;
+	    
+	    private String interview1Status;
+	    private String interview2Status;
+	    
+		public String getInterview1Status() {
+			return interview1Status;
+		}
+		public void setInterview1Status(String interview1Status) {
+			this.interview1Status = interview1Status;
+		}
+		public String getInterview2Status() {
+			return interview2Status;
+		}
+		public void setInterview2Status(String interview2Status) {
+			this.interview2Status = interview2Status;
+		}
 		public Long getId() {
 			return id;
 		}

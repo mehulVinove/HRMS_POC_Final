@@ -13,7 +13,7 @@ const navbarStyle = {
 
 function MyNavbar() {
   return (
-    <Navbar expand="lg"  bg="primary" data-bs-theme="dark" style={navbarStyle} className=" bg-body-tertiary bg-primary">
+    <Navbar expand="lg" bg="primary" data-bs-theme="dark" style={navbarStyle} className=" bg-body-tertiary bg-primary">
       <Container>
         <Navbar.Brand href="/">HRMS_portal</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -25,6 +25,10 @@ function MyNavbar() {
 
 
             <NavDropdown title="Employees" id="basic-nav-dropdown">
+              <NavDropdown.Item href="/add-employee">
+                Add Employee
+              </NavDropdown.Item>
+
               <NavDropdown.Item href="/employees">
                 Emp. List
               </NavDropdown.Item>
@@ -38,23 +42,29 @@ function MyNavbar() {
               </NavDropdown.Item> */}
             </NavDropdown>
             <Nav.Link href="/projects">Projects</Nav.Link>
-            <Nav.Link href="/candidates">Candidates</Nav.Link>
+            {/* <Nav.Link href="/candidates">Recruit.(Hiring)</Nav.Link> */}
+            <NavDropdown title="Recruit.(Hiring)" id="basic-nav-dropdown">
 
-            <button
-            className="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span className="navbar-toggler-icon"></span>
-          </button>
+              <button
+                className="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span className="navbar-toggler-icon"></span>
+              </button>
 
-          <Link className="btn btn-outline-light" to="/adduser">
-            Add Candidate
-          </Link>
+              { <Link className="btn btn-outline-light" to="/adduser">
+                Add Candidate
+              </Link> }
+                       
+              <NavDropdown.Item href="/candidates">
+                View
+              </NavDropdown.Item>
+            </NavDropdown>
 
           </Nav>
         </Navbar.Collapse>
