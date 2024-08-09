@@ -24,8 +24,6 @@ const EmployeeList = () => {
         <source src="/videos/video-1.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video> 
-       {/* <img src='/images/background.jpg' alt='Background' className='background-image' />
-       */}
       <h2>Employee List</h2>
       <ul>
         {employees.map(employee => (
