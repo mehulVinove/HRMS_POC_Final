@@ -15,21 +15,11 @@ import Projects from './pages/Projects';
 import Header from './components/common/Header';
 import MyNavbar from './components/common/MyNavbar';
 import CandidateDetails from './pages/CandidateDetails';
-import KanbanBoard from './components/KanbanBoard';
 import AddUser from './pages/AddUser';
 import CandidateList from './components/CandidateList';
 import EditCandidate from './components/EditCandidate';
 import AddEmployee from './components/AddEmployee';
-// function App() {
-//   return (
-
-//   <div className="App">
-//     <h1>HR Portal</h1>
-//     <EmployeeList />
-//   </div>
-//   );
-
-// }
+import HRList from './pages/HRList';
 
 const App = () => (
   <Router>
@@ -41,12 +31,12 @@ const App = () => (
       <Route path="/employees/:id" element={<EmployeeDetails />} />
       <Route path="/projects" element={<ProjectList />} />
       <Route path="/projects/:id" element={<ProjectDetails />} />
-      <Route path="/emp-status" component={KanbanBoard} />
       <Route path="/candidates" element={<CandidateList />} />
       <Route path="/candidates/:id" element={<CandidateDetails />} />
       <Route  path="/adduser" element={<AddUser />} />
       <Route path="/candidates/edit/:id" component={EditCandidate} />
       <Route path="/add-employee" element={<AddEmployee />} />
+      <Route path="/hr-list" element={<HRList />} /> 
 
       
     </Routes>

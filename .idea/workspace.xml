@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f542516a-02ed-4cd3-a1f9-3c46b14d9c7f" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/HR-portal-project-main/hr-portal-frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/HR-portal-project-main/hr-portal-frontend/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HR-portal-project-main/hr-portal-frontend/src/components/DraggableCard.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HR-portal-project-main/hr-portal-frontend/src/components/KanbanBoard.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HR-portal-project-main/hr-portal-frontend/src/components/KanbanBoard.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HR-portal-project-main/hr-portal-frontend/src/components/StageHeader.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HR-portal-project-main/hr-portal-frontend/src/components/common/MyNavbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/HR-portal-project-main/hr-portal-frontend/src/components/common/MyNavbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hrms-main/hrms/.project" beforeDir="false" afterPath="$PROJECT_DIR$/hrms-main/hrms/.project" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hrms-main/hrms/logs/spring-boot-application.log" beforeDir="false" afterPath="$PROJECT_DIR$/hrms-main/hrms/logs/spring-boot-application.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hrms-main/hrms/logs/spring-boot-application.log.2024-08-05.0.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hrms-main/hrms/logs/spring-boot-application.log.2024-08-06.0.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hrms-main/hrms/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hrms-main/hrms/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hrms-main/hrms/src/main/java/com/example/hrPortal/hrms/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrms-main/hrms/src/main/java/com/example/hrPortal/hrms/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hrms-main/hrms/target/classes/META-INF/maven/com.example.hrPortal/hrms/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/hrms-main/hrms/target/classes/META-INF/maven/com.example.hrPortal/hrms/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hrms-main/hrms/target/classes/META-INF/maven/com.example.hrPortal/hrms/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hrms-main/hrms/target/classes/META-INF/maven/com.example.hrPortal/hrms/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hrms-main/hrms/target/classes/com/example/hrPortal/hrms/HrmsApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/hrms-main/hrms/target/classes/com/example/hrPortal/hrms/HrmsApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hrms-main/hrms/target/classes/com/example/hrPortal/hrms/config/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/hrms-main/hrms/target/classes/com/example/hrPortal/hrms/config/SecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hrms-main/hrms/target/classes/com/example/hrPortal/hrms/controller/EmployeeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/hrms-main/hrms/target/classes/com/example/hrPortal/hrms/controller/EmployeeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hrms-main/hrms/target/classes/com/example/hrPortal/hrms/controller/HrController.class" beforeDir="false" afterPath="$PROJECT_DIR$/hrms-main/hrms/target/classes/com/example/hrPortal/hrms/controller/HrController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hrms-main/hrms/target/classes/com/example/hrPortal/hrms/controller/ProjectController.class" beforeDir="false" afterPath="$PROJECT_DIR$/hrms-main/hrms/target/classes/com/example/hrPortal/hrms/controller/ProjectController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hrms-main/hrms/target/classes/com/example/hrPortal/hrms/model/Employee.class" beforeDir="false" afterPath="$PROJECT_DIR$/hrms-main/hrms/target/classes/com/example/hrPortal/hrms/model/Employee.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hrms-main/hrms/target/classes/com/example/hrPortal/hrms/model/HR.class" beforeDir="false" afterPath="$PROJECT_DIR$/hrms-main/hrms/target/classes/com/example/hrPortal/hrms/model/HR.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hrms-main/hrms/target/classes/com/example/hrPortal/hrms/model/Project.class" beforeDir="false" afterPath="$PROJECT_DIR$/hrms-main/hrms/target/classes/com/example/hrPortal/hrms/model/Project.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hrms-main/hrms/target/classes/com/example/hrPortal/hrms/repository/EmployeeRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/hrms-main/hrms/target/classes/com/example/hrPortal/hrms/repository/EmployeeRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hrms-main/hrms/target/classes/com/example/hrPortal/hrms/repository/HRRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/hrms-main/hrms/target/classes/com/example/hrPortal/hrms/repository/HRRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hrms-main/hrms/target/classes/com/example/hrPortal/hrms/repository/ProjectRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/hrms-main/hrms/target/classes/com/example/hrPortal/hrms/repository/ProjectRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hrms-main/hrms/target/classes/com/example/hrPortal/hrms/service/EmployeeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/hrms-main/hrms/target/classes/com/example/hrPortal/hrms/service/EmployeeService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hrms-main/hrms/target/classes/com/example/hrPortal/hrms/service/HrService.class" beforeDir="false" afterPath="$PROJECT_DIR$/hrms-main/hrms/target/classes/com/example/hrPortal/hrms/service/HrService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hrms-main/hrms/target/classes/com/example/hrPortal/hrms/service/ProjectService.class" beforeDir="false" afterPath="$PROJECT_DIR$/hrms-main/hrms/target/classes/com/example/hrPortal/hrms/service/ProjectService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hrms-main/hrms/target/classes/com/example/hrPortal/hrms/util/CustomException.class" beforeDir="false" afterPath="$PROJECT_DIR$/hrms-main/hrms/target/classes/com/example/hrPortal/hrms/util/CustomException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hrms-main/hrms/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/hrms-main/hrms/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hrms-main/hrms/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/hrms-main/hrms/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hrms-main/hrms/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hrms-main/hrms/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hrms-main/hrms/target/surefire-reports/TEST-com.example.hrPortal.hrms.HrmsApplicationTests.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hrms-main/hrms/target/surefire-reports/com.example.hrPortal.hrms.HrmsApplicationTests.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hrms-main/hrms/target/test-classes/com/example/hrPortal/hrms/HrmsApplicationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/hrms-main/hrms/target/test-classes/com/example/hrPortal/hrms/HrmsApplicationTests.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 6
+}]]></component>
+  <component name="ProjectId" id="2kelsegaUud6bTn1Aq0R3Bkn1SE" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/Mehul Shakya/Documents/HRMS(poc) proejct"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f542516a-02ed-4cd3-a1f9-3c46b14d9c7f" name="Changes" comment="" />
+      <created>1723652130803</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1723652130803</updated>
+    </task>
+    <servers />
+  </component>
+</project>

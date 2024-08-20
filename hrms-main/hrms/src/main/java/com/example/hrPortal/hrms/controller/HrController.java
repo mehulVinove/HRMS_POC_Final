@@ -20,6 +20,7 @@ public class HrController {
 
 	@Autowired
 	private HrService hrService;
+	
     @GetMapping
     public List<HR> getAllHRs() {
         return hrService.getAllHRs();
