@@ -22,39 +22,39 @@ public class CandidateController {
 
 	 @Autowired
 	    private CandidateService candidateService;
+//
+//	    @GetMapping
+//	    public List<Candidate> getAllCandidates() {
+//	        return candidateService.getAllCandidates();
+//	    }
 
-	    @GetMapping
-	    public List<Candidate> getAllCandidates() {
-	        return candidateService.getAllCandidates();
-	    }
-
-	    @PostMapping
-	    public Candidate addCandidate(@RequestBody Candidate candidate) {
-	        return candidateService.saveCandidate(candidate);
-	    }
-	    
-	    @DeleteMapping("/{id}")
-	    public ResponseEntity<Void> deleteCandidate(@PathVariable Long id) {
-	        try {
-	            candidateService.deleteCandidate(id);
-	            return ResponseEntity.ok().build();
-	        } catch (Exception e) {
-	            // Log the exception (optional)
-	            // e.printStackTrace();
-	            return ResponseEntity.status(500).build();
-	        }
-	    }
-	    
-	    
-	    @PutMapping("/{id}")
-	    public ResponseEntity<Candidate> updateCandidate(@PathVariable Long id, @RequestBody Candidate candidate) {
-	        Candidate existingCandidate = candidateService.getCandidateById(id);
-	        if (existingCandidate != null) {
-	            candidate.setId(id);
-	            Candidate updatedCandidate = candidateService.saveCandidate(candidate);
-	            return ResponseEntity.ok(updatedCandidate);
-	        } else {
-	            return ResponseEntity.notFound().build();
-	        }
-	    }
+//	    @PostMapping
+//	    public Candidate addCandidate(@RequestBody Candidate candidate) {
+//	        return candidateService.saveCandidate(candidate);
+//	    }
+//	    
+//	    @DeleteMapping("/{id}")
+//	    public ResponseEntity<Void> deleteCandidate(@PathVariable Long id) {
+//	        try {
+//	            candidateService.deleteCandidate(id);
+//	            return ResponseEntity.ok().build();
+//	        } catch (Exception e) {
+//	            // Log the exception (optional)
+//	            // e.printStackTrace();
+//	            return ResponseEntity.status(500).build();
+//	        }
+//	    }
+//	    
+//	    
+//	    @PutMapping("/{id}")
+//	    public ResponseEntity<Candidate> updateCandidate(@PathVariable Long id, @RequestBody Candidate candidate) {
+//	        Candidate existingCandidate = candidateService.getCandidateById(id);
+//	        if (existingCandidate != null) {
+//	            candidate.setId(id);
+//	            Candidate updatedCandidate = candidateService.saveCandidate(candidate);
+//	            return ResponseEntity.ok(updatedCandidate);
+//	        } else {
+//	            return ResponseEntity.notFound().build();
+//	        }
+//	    }
 }

@@ -12,6 +12,7 @@ import org.springframework.security.config.annotation.authentication.configurati
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;
 //import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 //import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.config.http.SessionCreationPolicy;
@@ -19,6 +20,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
 import com.example.hrPortal.hrms.security.services.UserDetailsServiceImpl;
 
@@ -60,13 +62,19 @@ public class WebSecurityConfig {
 //
 //        http.addFilterBefore(authenticationJwtTokenFilter(), UsernamePasswordAuthenticationFilter.class);
 
-    	http.csrf().disable()
-		.securityMatcher("/api/auth/**")                              
-		.authorizeHttpRequests(authorize -> authorize
-			.anyRequest().hasRole("ADMIN")
-		)
-		.addFilterBefore(authenticationJwtTokenFilter(), UsernamePasswordAuthenticationFilter.class);
-        return http.build();
+    	   http
+           .csrf(AbstractHttpConfigurer::disable)
+           .cors(AbstractHttpConfigurer::disable)
+
+           .authorizeHttpRequests((requests) -> requests
+        		   .requestMatchers(new AntPathRequestMatcher("/api/auth/**")).permitAll()
+                   .requestMatchers(new AntPathRequestMatcher("/api/hr/**")).hasRole("HR")
+                   .requestMatchers(new AntPathRequestMatcher("/api/admin/**")).hasRole("ADMIN").anyRequest().authenticated()
+            )  //other URLs are only allowed authenticated users.
+           .addFilterBefore(authenticationJwtTokenFilter(), UsernamePasswordAuthenticationFilter.class);
+
+
+   return http.build();
     }
 
     @Bean

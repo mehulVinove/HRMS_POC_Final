@@ -23,6 +23,10 @@ public class HrService {
 	public HR createHR(HR hr) {
 		return hrRepository.save(hr);
 	}
+    public HR saveHR(HR hr) {
+        // Save the HR entity to the database and return the saved instance
+        return hrRepository.save(hr);
+    }
 	
 	public HR updateHR(Long id,HR hrDetails) {
 		HR hr=hrRepository.findById(id).orElse(null);

@@ -21,6 +21,7 @@ public class CandidateService  {
 	    public Candidate saveCandidate(Candidate candidate) {
 	        return candidateRepository.save(candidate);
 	    }
+
 	    
 	    public void deleteCandidate(Long id) {
 	        if (candidateRepository.existsById(id)) {
