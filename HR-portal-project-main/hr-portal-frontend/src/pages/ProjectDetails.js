@@ -21,7 +21,7 @@ const ProjectDetails = () => {
   }, [id]);
 
   return (
-    <div >
+    <div className='' >
       <h1 >Project Details</h1>
       {error && <p>{error}</p>}
       {project ? (

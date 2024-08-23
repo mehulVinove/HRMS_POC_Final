@@ -3,7 +3,7 @@ import axios from 'axios';
 import { useParams } from 'react-router-dom';
 
 const EmployeeDetails = () => {
-  const { id } = useParams(); 
+  const { id } = useParams(); // Get the employee ID from URL parameters
   const [employee, setEmployee] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
