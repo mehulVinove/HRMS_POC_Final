@@ -22,7 +22,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/hr")
-@PreAuthorize("hasRole('HR')")
+//@PreAuthorize("hasRole('HR')")
 public class HrController {
 
 	@Autowired

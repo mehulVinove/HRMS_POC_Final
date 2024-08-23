@@ -20,7 +20,7 @@ import com.example.hrPortal.hrms.service.ProjectService;
 
 @RestController
 @RequestMapping("/api/admin")
-@PreAuthorize("hasRole('ADMIN')")
+//@PreAuthorize("hasRole('ADMIN')")
 public class AdminController {
 
     @Autowired
@@ -111,12 +111,7 @@ public class AdminController {
         hrService.deleteHR(id);
         return ResponseEntity.noContent().build();
     }
-    
-    
-    
-    
-    
-    
+   
     
 	@GetMapping("/projects")
 	public List<Project> getAllProjects(){
