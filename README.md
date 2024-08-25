@@ -6,7 +6,7 @@ Mysql(Workbench)
 Node.js
 Postman
 
-**Steps**
+# Steps
 Clone the Repository
 cd {repo-url}
 Build the Project(for terminal)
