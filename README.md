@@ -21,7 +21,7 @@ Usage:
 
 Access the Application: Open your web browser and navigate to http://localhost:3000 after setting up your project code on both backend(Eclipse/Intellij) and frontend(Vs Code).
 
-#After setting it up check every endpoint to fetch the data using postman but first you have to add  data into the tables.Refer the controller classes for the same.
+# Check every endpoint at localhost:8082 using postman ,it should fetch the data.But first you have to add data into the tables.Refer the controller classes for the same.
 
 For database-
 setup the Mysql Workbench
