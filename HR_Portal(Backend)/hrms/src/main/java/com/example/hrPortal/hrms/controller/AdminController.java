@@ -20,7 +20,7 @@ import com.example.hrPortal.hrms.service.ProjectService;
 
 @RestController
 @RequestMapping("/api/admin")
-//@PreAuthorize("hasRole('ADMIN')")
+@PreAuthorize("hasRole('ADMIN')")
 public class AdminController {
 
     @Autowired
