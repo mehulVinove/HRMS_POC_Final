@@ -3,49 +3,6 @@ import axios from 'axios';
 import './BackgroundVideo.css'; 
 import './EmployeeList.css';
 
-// const EmployeeList = () => {
-//   const [employees, setEmployees] = useState([]);
-//   const [error, setError] = useState(null);
-
-//   useEffect(() => {
-//     const token = JSON.parse(localStorage.getItem('token'));
-//     console.log(token);
-
-//     axios.get('http://localhost:8082/api/admin/employees', {
-//         headers: {
-//           'Authorization': `Bearer ${token.data.accessToken}`  // Add the token to the Authorization header
-//         }
-//       }    )
-  
-//       .then(response => {
-//         setEmployees(response.data);
-//       })
-//       .catch(error => {
-//         console.error('There was an error fetching the employees!', error);
-//         setError('Failed to fetch employees.');
-//       });
-//   }, []);
-
-//   return (
-//     <div className='centered-text background'>
-//          <video autoPlay loop muted className="video">
-//         <source src="/videos/video-1.mp4" type="video/mp4" />
-//         Your browser does not support the video tag.
-//       </video> 
-//       <h2>Employee List</h2>
-//       <ul>
-//         {employees.map(employee => (
-//           <li key={employee.id}>
-//             {employee.name} - {employee.position} - {employee.salary}
-//           </li>
-//         ))}
-//       </ul>
-//     </div>
-//   );
-// };
-
-// export default EmployeeList;
-
 
 const EmployeeList = () => {
   const [employees, setEmployees] = useState([]);
@@ -104,21 +61,36 @@ const EmployeeList = () => {
 
   return (
     <div className='centered-text background'>
-      <video autoPlay loop muted className="video">
-        <source src="/videos/video-1.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video> 
+    
       <h2>Employee List</h2>
       {error ? (
         <p>{error}</p>
       ) : (
-        <ul>
-          {employees.map(employee => (
-            <li key={employee.id}>
-              {employee.name} - {employee.position} - {employee.salary}
-            </li>
-          ))}
-        </ul>
+        <table className="table table-bordered">
+          <thead>
+            <tr>
+              <th>S.N</th>
+              <th>Name</th>
+              <th>Position</th>
+              <th>Salary</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            {employees.map((employee, index) => (
+              <tr key={employee.id}>
+                <td>{index + 1}</td>
+                <td>{employee.name}</td>
+                <td>{employee.position}</td>
+                <td>{employee.salary}</td>
+                <td>
+                  <button className="btn btn-primary">Edit</button>
+                  <button className="btn btn-danger">Delete</button>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
       )}
     </div>
   );
