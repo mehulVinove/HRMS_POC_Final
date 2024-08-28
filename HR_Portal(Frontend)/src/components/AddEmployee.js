@@ -21,7 +21,7 @@ export default function AddEmployee() {
     e.preventDefault();
    
 try{   
-    await axios.post("http://localhost:8082/api/", employee);
+    await axios.post("http://localhost:8082/api", employee);
     navigate("/employees"); 
 }
 catch (error) {

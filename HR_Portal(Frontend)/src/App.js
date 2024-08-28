@@ -61,6 +61,7 @@ const App = () => {
         <Route path="/candidates/edit/:id" element={isAuthenticated ? <EditCandidate /> : <Navigate to="/login" />} />
         <Route path="/add-employee" element={isAuthenticated ? <AddEmployee /> : <Navigate to="/login" />} />
         <Route path="/hr-list" element={isAuthenticated ? <HRList /> : <Navigate to="/login" />} />
+        <Route path="/login" element={<Login />} />
       </Routes>
       </>
   );
