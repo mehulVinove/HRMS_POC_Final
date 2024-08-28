@@ -5,6 +5,7 @@ import { NavDropdown, Form, FormControl, Button } from 'react-bootstrap';
 import React, { Component,useState,useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './MyNavbar.css';
+import { useNavigate } from 'react-router-dom';
 const navbarStyle = {
   backgroundColor: '#4CAF50', // Set your desired background color
 };
@@ -12,6 +13,7 @@ const navbarStyle = {
 function MyNavbar() {
   const [userRole, setUserRole] = useState(null); // State for user role
   const [error, setError] = useState(null); // State for any potential error
+  const navigate = useNavigate(); 
 
   useEffect(() => {
     // Retrieve the token from localStorage
@@ -40,11 +42,15 @@ function MyNavbar() {
     setUserRole(role); // Set the retrieved user role to state
 
   }, []); // Empty dependency array to run only once on component mount
+  const handleLogout = () => {
+    localStorage.removeItem('token'); // Clear token from localStorage
+    navigate('/login'); // Redirect to the login page
+  };
 
   return (
     <Navbar expand="lg" bg="primary" data-bs-theme="dark" style={navbarStyle} className="bg-body-tertiary bg-primary">
       <Container>
-        <Navbar.Brand href="/">HRMS Portal</Navbar.Brand>
+        <Navbar.Brand href="/home">HRMS Portal</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
@@ -86,6 +92,10 @@ function MyNavbar() {
                 </NavDropdown>
               </>
             )}
+          </Nav>
+           {/* Logout Button */}
+           <Nav className="ml-auto">
+            <Button variant="outline-light" onClick={handleLogout}>Logout</Button>
           </Nav>
         </Navbar.Collapse>
       </Container>
