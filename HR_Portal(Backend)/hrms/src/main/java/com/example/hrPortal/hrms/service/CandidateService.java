@@ -23,12 +23,19 @@ public class CandidateService  {
 	    }
 
 	    
-	    public void deleteCandidate(Long id) {
-	        if (candidateRepository.existsById(id)) {
-	            candidateRepository.deleteById(id);
-	        } else {
-	            throw new RuntimeException("Candidate not found");
-	        }
+	    public boolean deleteCandidate(Long id) {
+//	        if (candidateRepository.existsById(id)) {
+//	            candidateRepository.deleteById(id);
+//	        } else {
+//	            throw new RuntimeException("Candidate not found");
+//	        }
+	    	 if (candidateRepository.existsById(id)) {
+	    	        candidateRepository.deleteById(id);
+	    	        return true;
+	    	    } else {
+	    	        return false;
+	    	    }
+	    
 	    }
 	    public Candidate getCandidateById(Long id) {
 	        Optional<Candidate> candidate = candidateRepository.findById(id);

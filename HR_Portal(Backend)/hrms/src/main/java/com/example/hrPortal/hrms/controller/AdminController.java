@@ -47,6 +47,17 @@ public class AdminController {
         return ResponseEntity.ok(candidates);
     }
     
+    // New DELETE endpoint
+    @DeleteMapping("/candidates/{id}")
+    public ResponseEntity<String> deleteCandidate(@PathVariable Long id) {
+        boolean isRemoved = candidateService.deleteCandidate(id);
+        if (isRemoved) {
+            return ResponseEntity.ok("Candidate deleted successfully.");
+        } else {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Candidate not found.");
+        }
+    }
+    
     @PostMapping("/employees")
     public ResponseEntity<?> createEmployee(@RequestBody Employee employee) {
         Employee savedEmployee = employeeService.saveEmployee(employee);
