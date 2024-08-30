@@ -64,12 +64,16 @@ function MyNavbar() {
                   <NavDropdown.Item href="/add-employee">Add Employee</NavDropdown.Item>
                   <NavDropdown.Item href="/employees">Emp. List</NavDropdown.Item>
                 </NavDropdown>
-
-                {/* Projects Tab */}
-                <Nav.Link href="/projects">Projects</Nav.Link>
-
-                {/* HR Tab */}
-                <Nav.Link href="/hr-list">HR</Nav.Link>
+ {/* Projects Dropdown */}
+                <NavDropdown title="Projects" id="basic-nav-dropdown">
+                  <NavDropdown.Item href="/add-project">Add Project</NavDropdown.Item>
+                  <NavDropdown.Item href="/projects">Project List</NavDropdown.Item>
+                </NavDropdown>
+                
+                <NavDropdown title="HR" id="hr-nav-dropdown">
+                  <NavDropdown.Item href="/add-hr">Add HR</NavDropdown.Item>
+                  <NavDropdown.Item href="/hr-list">HR List</NavDropdown.Item>
+                </NavDropdown>
                  {/* Existing Recruit.(Hiring) Dropdown */}
                  <NavDropdown title="Recruit.(Hiring)" id="basic-nav-dropdown">
                   <NavDropdown.Item href="/adduser">Add Candidate</NavDropdown.Item>
