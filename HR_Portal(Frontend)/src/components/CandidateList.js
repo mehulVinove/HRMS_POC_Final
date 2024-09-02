@@ -1,3 +1,4 @@
+
 // import React, { useState, useEffect } from 'react';
 // import axios from 'axios';
 
@@ -103,9 +104,25 @@
 
 //   const handleDelete = (id) => {
 //     const token = JSON.parse(localStorage.getItem('token'));
-//     axios.delete(`http://localhost:8082/api/admin/candidates/${id}`, {
+  
+//     if (!token || !token.data || !token.data.accessToken) {
+//       setError('Token is missing or invalid');
+//       return;
+//     }
+  
+//     const userRole = getUserRole(token);
+//     const endpoint =
+//       userRole === 'ROLE_ADMIN' ? `http://localhost:8082/api/admin/candidates/${id}` :
+//       userRole === 'ROLE_HR' ? `http://localhost:8082/api/hr/candidates/${id}` : null;
+  
+//     if (!endpoint) {
+//       setError('Invalid user role or unauthorized access');
+//       return;
+//     }
+  
+//     axios.delete(endpoint, {
 //       headers: {
-//         'Authorization': `Bearer ${token.data.accessToken}` // Add the token to the Authorization header
+//         'Authorization': `Bearer ${token.data.accessToken}`
 //       }
 //     })
 //     .then(() => {
@@ -113,8 +130,24 @@
 //     })
 //     .catch(error => {
 //       console.error('There was an error deleting the candidate!', error);
-//       setError('Failed to delete candidate.');
+//       if (error.response && error.response.status === 403) {
+//         setError('Access denied. You do not have permission to delete this candidate.');
+//       } else {
+//         setError('Failed to delete candidate.');
+//       }
 //     });
+//   };
+  
+//   // Function to get user role from the token
+//   const getUserRole = (token) => {
+//     try {
+//       if (token.data && token.data.roles && token.data.roles.length > 0) {
+//         return token.data.roles[0]; // Use the role directly from data.roles array
+//       }
+//     } catch (error) {
+//       console.error('Error getting user role:', error);
+//       return null;
+//     }
 //   };
 
 //   return (
@@ -329,17 +362,18 @@ const CandidateList = () => {
       setError('Token is missing or invalid');
       return;
     }
-  
+
+    // Ensure we get the correct user role and endpoint
     const userRole = getUserRole(token);
     const endpoint =
       userRole === 'ROLE_ADMIN' ? `http://localhost:8082/api/admin/candidates/${id}` :
       userRole === 'ROLE_HR' ? `http://localhost:8082/api/hr/candidates/${id}` : null;
-  
+
     if (!endpoint) {
       setError('Invalid user role or unauthorized access');
       return;
     }
-  
+
     axios.delete(endpoint, {
       headers: {
         'Authorization': `Bearer ${token.data.accessToken}`
@@ -347,6 +381,7 @@ const CandidateList = () => {
     })
     .then(() => {
       setCandidates(candidates.filter(candidate => candidate.id !== id));
+      console.log('Candidate deleted successfully');
     })
     .catch(error => {
       console.error('There was an error deleting the candidate!', error);

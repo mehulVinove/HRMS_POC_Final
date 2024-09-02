@@ -118,9 +118,31 @@ export default function AddUser() {
       const token = storedData.data.accessToken;
       console.log("JWT Token:", token);
 
+      const userRole = storedData.data.roles[0]; // Assuming the role is stored in the token data
+
+console.log("User Role:", userRole);
+
+// Initialize endpoint variable
+let endpoint = "";
+
+// Determine the correct endpoint based on the user's role for candidate operations
+if (userRole === "ROLE_ADMIN") {
+  endpoint = "http://localhost:8082/api/admin/candidates"; // Admin endpoint for candidates
+} else if (userRole === "ROLE_HR") {
+  endpoint = "http://localhost:8082/api/hr/candidates"; // HR endpoint for candidates
+} else {
+  console.error("Invalid user role. Cannot determine the correct endpoint.");
+  alert("You do not have the necessary permissions to perform this action.");
+  return;
+}
+
+// Now, you can use this endpoint to make a POST request for candidate-related operations
+
+
+
       // Send POST request with Authorization header
       await axios.post(
-        "http://localhost:8082/api/admin/candidates", // Ensure this endpoint is correct
+        endpoint, // Ensure this endpoint is correct
         user,
         {
           headers: {

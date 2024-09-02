@@ -163,8 +163,21 @@ const EmployeeList = () => {
       return;
     }
 
+    // Determine the endpoint based on user role for deletion
+    const userRole = token.data.roles[0]; // Get the user role
+    let deleteEndpoint = '';
+
+    if (userRole === 'ROLE_ADMIN') {
+      deleteEndpoint = `http://localhost:8082/api/admin/employees/${id}`; // Admin delete endpoint
+    } else if (userRole === 'ROLE_HR') {
+      deleteEndpoint = `http://localhost:8082/api/hr/employees/${id}`; // HR delete endpoint
+    } else {
+      setError('Invalid user role or unauthorized access');
+      return;
+    }
+
     try {
-      const response = await axios.delete(`http://localhost:8082/api/admin/employees/${id}`, {
+      const response = await axios.delete(deleteEndpoint, {
         headers: {
           'Authorization': `Bearer ${token.data.accessToken}`
         }
