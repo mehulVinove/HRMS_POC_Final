@@ -1,22 +1,20 @@
-
-
-import axios from "axios";
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import axios from "axios";
 
-export default function AddEmployee() {
+export default function AddProject() {
   let navigate = useNavigate();
 
-  const [employee, setEmployee] = useState({
+  const [project, setProject] = useState({
     name: "",
-    position: "",
-    salary: "",
+    description: "",
+    status: "",
   });
 
-  const { name, position, salary } = employee;
+  const { name, description, status } = project;
 
   const onInputChange = (e) => {
-    setEmployee({ ...employee, [e.target.name]: e.target.value });
+    setProject({ ...project, [e.target.name]: e.target.value });
   };
 
   const onSubmit = async (e) => {
@@ -24,34 +22,23 @@ export default function AddEmployee() {
 
     try {
       // Retrieve the token data from local storage
-      const storedData = JSON.parse(localStorage.getItem("token"));
+      const storedData = JSON.parse(localStorage.getItem("token")); // Adjust the key if your storage method or key is different
 
+      // Check if storedData exists and contains the accessToken
       if (!storedData || !storedData.data || !storedData.data.accessToken) {
         console.error("No token found in local storage.");
         alert("You are not logged in. Please log in and try again.");
         return;
       }
 
+      // Extract the access token
       const token = storedData.data.accessToken;
       console.log("JWT Token:", token);
-      const userRole = storedData.data.roles[0]; 
 
-      console.log("User Role:", userRole);
-      let endpoint = "";
-
-      if (userRole === "ROLE_ADMIN") {
-        endpoint = "http://localhost:8082/api/admin/employees";
-      } else if (userRole === "ROLE_HR") {
-        endpoint = "http://localhost:8082/api/hr/employees";
-      } else {
-        console.error("Invalid user role. Cannot determine the correct endpoint.");
-        alert("You do not have the necessary permissions to perform this action.");
-        return;
-      }
-
+      // Send POST request with Authorization header
       await axios.post(
-        endpoint,
-        employee,
+        "http://localhost:8082/api/admin/projects",
+        project,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -59,14 +46,16 @@ export default function AddEmployee() {
         }
       );
 
-      navigate("/employees");
+      // Navigate to the projects page upon successful submission
+      navigate("/projects");
     } catch (error) {
-      console.error("Error adding employee:", error);
+      console.error("Error adding project:", error);
 
+      // Handle unauthorized access or other errors
       if (error.response && error.response.status === 403) {
         alert("Access denied. You are not authorized to perform this action.");
       } else {
-        alert("An error occurred while adding the employee. Please try again.");
+        alert("An error occurred while adding the project. Please try again.");
       }
     }
   };
@@ -75,7 +64,7 @@ export default function AddEmployee() {
     <div className="container">
       <div className="row">
         <div className="col-md-6 offset-md-3 border rounded p-4 mt-2 shadow">
-          <h2 className="text-center m-4">Register Employee</h2>
+          <h2 className="text-center m-4">Add Project</h2>
 
           <form onSubmit={(e) => onSubmit(e)}>
             <div className="mb-3">
@@ -83,50 +72,44 @@ export default function AddEmployee() {
                 Name
               </label>
               <input
-                type={"text"}
+                type="text"
                 className="form-control"
-                placeholder="Enter employee name"
+                placeholder="Enter project name"
                 name="name"
                 value={name}
                 onChange={(e) => onInputChange(e)}
-                minLength="1"
-                maxLength="50"
-                required
               />
             </div>
             <div className="mb-3">
-              <label htmlFor="Position" className="form-label">
-                Position
-              </label>
-              <select
-                className="form-control"
-                name="position"
-                value={position}
-                onChange={(e) => onInputChange(e)}
-              >
-                <option value="">Select Position</option>
-                <option value="Manager">Manager</option>
-                <option value="Developer">Developer</option>
-                <option value="Tester">Tester</option>
-              </select>
-            </div>
-            <div className="mb-3">
-              <label htmlFor="Salary" className="form-label">
-                Salary
+              <label htmlFor="Description" className="form-label">
+                Description
               </label>
               <input
-                type={"number"}
+                type="text"
                 className="form-control"
-                placeholder="Enter employee salary"
-                name="salary"
-                value={salary}
+                placeholder="Enter project description"
+                name="description"
+                value={description}
+                onChange={(e) => onInputChange(e)}
+              />
+            </div>
+            <div className="mb-3">
+              <label htmlFor="Status" className="form-label">
+                Status
+              </label>
+              <input
+                type="text"
+                className="form-control"
+                placeholder="Enter project status"
+                name="status"
+                value={status}
                 onChange={(e) => onInputChange(e)}
               />
             </div>
             <button type="submit" className="btn btn-outline-primary">
               Submit
             </button>
-            <Link className="btn btn-outline-danger mx-2" to="/employees">
+            <Link className="btn btn-outline-danger mx-2" to="/projects">
               Cancel
             </Link>
           </form>

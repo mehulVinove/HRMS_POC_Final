@@ -1,3 +1,4 @@
+
 // import React, { useState, useEffect } from 'react';
 // import axios from 'axios';
 
@@ -10,23 +11,53 @@
 //   const [status, setStatus] = useState('');
 
 //   useEffect(() => {
-    
 //     const token = JSON.parse(localStorage.getItem('token'));
+//     console.log('Token:', token); // Debugging: Check token retrieval
 
-//     axios.get('http://localhost:8082/api/admin/candidates', {
-//         headers: {
-//           'Authorization': `Bearer ${token.data.accessToken}`  // Add the token to the Authorization header
+//     if (!token || !token.data || !token.data.accessToken) {
+//       setError('Token is missing or invalid');
+//       return;
+//     }
+
+//     const getUserRole = (token) => {
+//       try {
+//         if (token.data && token.data.roles && token.data.roles.length > 0) {
+//           return token.data.roles[0]; // Use the role directly from data.roles array
 //         }
-//       })  
-    
-    
+//       } catch (error) {
+//         console.error('Error getting user role:', error);
+//         return null;
+//       }
+//     };
+
+//     const userRole = getUserRole(token);
+//     console.log('User role:', userRole);
+
+//     const endpoint =
+//       userRole === 'ROLE_ADMIN' ? 'http://localhost:8082/api/admin/candidates' :
+//       userRole === 'ROLE_HR' ? 'http://localhost:8082/api/hr/candidates' : null;
+
+//     if (!endpoint) {
+//       setError('Invalid user role or unauthorized access');
+//       return;
+//     }
+
+//     axios.get(endpoint, {
+//       headers: {
+//         'Authorization': `Bearer ${token.data.accessToken}` // Add the token to the Authorization header
+//       }
+//     })
 //     .then(response => {
-//         setCandidates(response.data);
-//       }) 
-//       .catch(error => {
-//         console.error('There was an error fetching the candidates!', error);
+//       setCandidates(response.data);
+//     })
+//     .catch(error => {
+//       console.error('There was an error fetching the candidates!', error);
+//       if (error.response && error.response.status === 403) {
+//         setError('Access denied. You do not have permission to view this resource.');
+//       } else {
 //         setError('Failed to fetch candidates.');
-//       });
+//       }
+//     });
 //   }, []);
 
 //   const handleEditClick = (id, currentStatus, interview1Status, interview2Status) => {
@@ -49,32 +80,74 @@
 //   };
 
 //   const handleSave = (id) => {
-//     axios.put(`http://localhost:8082/api/candidates/${id}`, {
+//     const token = JSON.parse(localStorage.getItem('token'));
+//     axios.put(`http://localhost:8082/api/admin/candidates/${id}`, {
 //       status,
 //       interview1Status,
 //       interview2Status
+//     }, {
+//       headers: {
+//         'Authorization': `Bearer ${token.data.accessToken}` // Add the token to the Authorization header
+//       }
 //     })
-//       .then(() => {
-//         setCandidates(candidates.map(candidate => 
-//           candidate.id === id ? { ...candidate, status, interview1Status, interview2Status } : candidate
-//         ));
-//         setEditId(null);
-//       })
-//       .catch(error => {
-//         console.error('There was an error updating the candidate!', error);
-//         setError('Failed to update candidate.');
-//       });
+//     .then(() => {
+//       setCandidates(candidates.map(candidate => 
+//         candidate.id === id ? { ...candidate, status, interview1Status, interview2Status } : candidate
+//       ));
+//       setEditId(null);
+//     })
+//     .catch(error => {
+//       console.error('There was an error updating the candidate!', error);
+//       setError('Failed to update candidate.');
+//     });
 //   };
 
 //   const handleDelete = (id) => {
-//     axios.delete(`http://localhost:8082/api/candidates/${id}`)
-//       .then(() => {
-//         setCandidates(candidates.filter(candidate => candidate.id !== id));
-//       })
-//       .catch(error => {
-//         console.error('There was an error deleting the candidate!', error);
+//     const token = JSON.parse(localStorage.getItem('token'));
+  
+//     if (!token || !token.data || !token.data.accessToken) {
+//       setError('Token is missing or invalid');
+//       return;
+//     }
+  
+//     const userRole = getUserRole(token);
+//     const endpoint =
+//       userRole === 'ROLE_ADMIN' ? `http://localhost:8082/api/admin/candidates/${id}` :
+//       userRole === 'ROLE_HR' ? `http://localhost:8082/api/hr/candidates/${id}` : null;
+  
+//     if (!endpoint) {
+//       setError('Invalid user role or unauthorized access');
+//       return;
+//     }
+  
+//     axios.delete(endpoint, {
+//       headers: {
+//         'Authorization': `Bearer ${token.data.accessToken}`
+//       }
+//     })
+//     .then(() => {
+//       setCandidates(candidates.filter(candidate => candidate.id !== id));
+//     })
+//     .catch(error => {
+//       console.error('There was an error deleting the candidate!', error);
+//       if (error.response && error.response.status === 403) {
+//         setError('Access denied. You do not have permission to delete this candidate.');
+//       } else {
 //         setError('Failed to delete candidate.');
-//       });
+//       }
+//     });
+//   };
+  
+//   // Function to get user role from the token
+//   const getUserRole = (token) => {
+//     try {
+//       if (token.data && token.data.roles && token.data.roles.length > 0) {
+//         return token.data.roles[0]; // Use the role directly from data.roles array
+//       }
+//     } catch (error) {
+//       console.error('Error getting user role:', error);
+//       return null;
+//     }
 //   };
 
 //   return (
@@ -213,7 +286,6 @@ const CandidateList = () => {
     const userRole = getUserRole(token);
     console.log('User role:', userRole);
 
-    // Determine the endpoint based on user role
     const endpoint =
       userRole === 'ROLE_ADMIN' ? 'http://localhost:8082/api/admin/candidates' :
       userRole === 'ROLE_HR' ? 'http://localhost:8082/api/hr/candidates' : null;
@@ -261,10 +333,15 @@ const CandidateList = () => {
   };
 
   const handleSave = (id) => {
-    axios.put(`http://localhost:8082/api/candidates/${id}`, {
+    const token = JSON.parse(localStorage.getItem('token'));
+    axios.put(`http://localhost:8082/api/admin/candidates/${id}`, {
       status,
       interview1Status,
       interview2Status
+    }, {
+      headers: {
+        'Authorization': `Bearer ${token.data.accessToken}` // Add the token to the Authorization header
+      }
     })
     .then(() => {
       setCandidates(candidates.map(candidate => 
@@ -279,14 +356,53 @@ const CandidateList = () => {
   };
 
   const handleDelete = (id) => {
-    axios.delete(`http://localhost:8082/api/candidates/${id}`)
+    const token = JSON.parse(localStorage.getItem('token'));
+  
+    if (!token || !token.data || !token.data.accessToken) {
+      setError('Token is missing or invalid');
+      return;
+    }
+
+    // Ensure we get the correct user role and endpoint
+    const userRole = getUserRole(token);
+    const endpoint =
+      userRole === 'ROLE_ADMIN' ? `http://localhost:8082/api/admin/candidates/${id}` :
+      userRole === 'ROLE_HR' ? `http://localhost:8082/api/hr/candidates/${id}` : null;
+
+    if (!endpoint) {
+      setError('Invalid user role or unauthorized access');
+      return;
+    }
+
+    axios.delete(endpoint, {
+      headers: {
+        'Authorization': `Bearer ${token.data.accessToken}`
+      }
+    })
     .then(() => {
       setCandidates(candidates.filter(candidate => candidate.id !== id));
+      console.log('Candidate deleted successfully');
     })
     .catch(error => {
       console.error('There was an error deleting the candidate!', error);
-      setError('Failed to delete candidate.');
+      if (error.response && error.response.status === 403) {
+        setError('Access denied. You do not have permission to delete this candidate.');
+      } else {
+        setError('Failed to delete candidate.');
+      }
     });
+  };
+  
+  // Function to get user role from the token
+  const getUserRole = (token) => {
+    try {
+      if (token.data && token.data.roles && token.data.roles.length > 0) {
+        return token.data.roles[0]; // Use the role directly from data.roles array
+      }
+    } catch (error) {
+      console.error('Error getting user role:', error);
+      return null;
+    }
   };
 
   return (

@@ -22,6 +22,8 @@ import AddEmployee from './components/AddEmployee';
 import HRList from './pages/HRList';
 import Login from './components/Login';
 import Signup from './components/Signup';
+import AddProject from './components/AddProject';
+import AddHR from './pages/AddHR';
 
 const App = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(localStorage.getItem('token') ? true : false);
@@ -61,6 +63,8 @@ const App = () => {
         <Route path="/candidates/edit/:id" element={isAuthenticated ? <EditCandidate /> : <Navigate to="/login" />} />
         <Route path="/add-employee" element={isAuthenticated ? <AddEmployee /> : <Navigate to="/login" />} />
         <Route path="/hr-list" element={isAuthenticated ? <HRList /> : <Navigate to="/login" />} />
+        <Route path="/add-hr" element={<AddHR />} />
+        <Route path="/add-project" element={<AddProject />} /> 
         <Route path="/login" element={<Login />} />
       </Routes>
       </>

@@ -15,7 +15,7 @@ const EditCandidate = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    axios.get(`http://localhost:8082/api/candidates/${id}`)
+    axios.get(`http://localhost:8082/api/admin/candidates/${id}`)
       .then(response => {
         setCandidate(response.data);
       })
