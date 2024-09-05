@@ -40,6 +40,25 @@ public class AdminController {
         Candidate savedCandidate = candidateService.saveCandidate(candidate);
         return ResponseEntity.ok(savedCandidate);
     }
+    
+    
+//    @PutMapping("/candidates/{id}")
+//    public ResponseEntity<Candidate> updateCandidate(@PathVariable Long id, @RequestBody Candidate candidateDetails) {
+//        Candidate updatedCandidate = candidateService.updateCandidate(id, candidateDetails);
+//        if (updatedCandidate == null) {
+//            return ResponseEntity.notFound().build();
+//        }
+//        return ResponseEntity.ok(updatedCandidate);
+//    }
+    @PutMapping("/candidates/{id}")
+    public ResponseEntity<Candidate> updateCandidate(@PathVariable Long id, @RequestBody Candidate candidateDetails) {
+        try {
+            Candidate updatedCandidate = candidateService.updateCandidate(id, candidateDetails);
+            return ResponseEntity.ok(updatedCandidate);
+        } catch (RuntimeException e) {
+            return ResponseEntity.notFound().build();  // Return 404 if candidate not found
+        }
+    }
 
     @GetMapping("/candidates")
     public ResponseEntity<List<Candidate>> getAllCandidates() {
@@ -91,10 +110,6 @@ public class AdminController {
         employeeService.deleteEmployee(id);
         return ResponseEntity.noContent().build();
     }
-    
-
- 
-
     
     @GetMapping("/hr")
     public ResponseEntity<List<HR>> getAllHrs() {

@@ -15,6 +15,29 @@ public class Employee {
 	private String position;
 	private double salary;
 	
+	 // Add new fields
+	  private String address;
+	  private String phone;
+	  private String dept;
+	
+	public String getAddress() {
+		return address;
+	}
+	public void setAddress(String address) {
+		this.address = address;
+	}
+	public String getPhone() {
+		return phone;
+	}
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
+	public String getDept() {
+		return dept;
+	}
+	public void setDept(String dept) {
+		this.dept = dept;
+	}
 	public Long getId() {
 		return id;
 	}

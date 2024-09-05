@@ -1,6 +1,7 @@
 package com.example.hrPortal.hrms.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -35,18 +36,6 @@ public class HrController {
     private EmployeeService employeeService;
 	
    
-    
-
-//    @PutMapping("/{id}")
-//    public HR updateHR(@PathVariable Long id, @RequestBody HR hrDetails) {
-//        return hrService.updateHR(id, hrDetails);
-//    }
-//
-//    @DeleteMapping("/{id}")
-//    public void deleteHR(@PathVariable Long id) {
-//        hrService.deleteHR(id);
-//	
-//    }
 	
     @PostMapping("/candidates")
     public ResponseEntity<?> createCandidate(@RequestBody Candidate candidate) {
@@ -57,6 +46,26 @@ public class HrController {
     public ResponseEntity<List<Candidate>> getAllCandidates() {
         List<Candidate> candidates = candidateService.getAllCandidates();
         return ResponseEntity.ok(candidates);
+    }
+    
+    @PutMapping("/candidates/{id}")
+    public ResponseEntity<Candidate> updateCandidate(@PathVariable Long id, @RequestBody Candidate candidateDetails) {
+        try {
+            Candidate updatedCandidate = candidateService.updateCandidate(id, candidateDetails);
+            return ResponseEntity.ok(updatedCandidate);
+        } catch (RuntimeException e) {
+            return ResponseEntity.notFound().build();  // Return 404 if candidate not found
+        }
+    }
+    
+    @DeleteMapping("/candidates/{id}")
+    public ResponseEntity<String> deleteCandidate(@PathVariable Long id) {
+        boolean isRemoved = candidateService.deleteCandidate(id);
+        if (isRemoved) {
+            return ResponseEntity.ok("Candidate deleted successfully.");
+        } else {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Candidate not found.");
+        }
     }
     
     @GetMapping(path = "/employees")

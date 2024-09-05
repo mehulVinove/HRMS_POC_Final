@@ -42,13 +42,32 @@ public class CandidateService  {
 	        return candidate.orElse(null); // or throw an exception if not found
 	    }
 	    
-	    public Candidate updateCandidate(Candidate candidate) {
-	        if (candidateRepository.existsById(candidate.getId())) {
-	            return candidateRepository.save(candidate);
-	        } else {
+//	    public Candidate updateCandidate(Candidate candidate) {
+//	        if (candidateRepository.existsById(candidate.getId())) {
+//	            return candidateRepository.save(candidate);
+//	        } else {
+//	            throw new RuntimeException("Candidate not found");
+//	        }
+//	    }
+	 
+	    public Candidate updateCandidate(Long id, Candidate candidateDetails) {
+	        Optional<Candidate> candidateOptional = candidateRepository.findById(id);
+
+	        if (!candidateOptional.isPresent()) {
 	            throw new RuntimeException("Candidate not found");
 	        }
+
+	        Candidate candidate = candidateOptional.get();
+	        
+	        // Update candidate fields from the provided candidateDetails
+	        candidate.setName(candidateDetails.getName());
+	        candidate.setPosition(candidateDetails.getPosition());
+	        candidate.setStatus(candidateDetails.getStatus());
+	        candidate.setInterview1Status(candidateDetails.getInterview1Status());
+	        candidate.setInterview2Status(candidateDetails.getInterview2Status());
+
+	        // Save the updated candidate to the database
+	        return candidateRepository.save(candidate);
 	    }
-	 
 	 
 }

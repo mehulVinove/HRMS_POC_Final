@@ -1,0 +1,15 @@
+# Use an official OpenJDK 21 runtime as the base image
+FROM openjdk:21-jdk-slim
+
+# Set the working directory inside the container
+WORKDIR /app
+
+# Copy the JAR file from the nested directory to the working directory
+# Adjust the path to your JAR file location
+COPY HR_Portal(Backend)/hrms/target/hrms-0.0.1-SNAPSHOT.jar /app/hrms-backend.jar
+
+# Expose the port your Spring Boot app runs on
+EXPOSE 8082
+
+# Command to run the Spring Boot application
+ENTRYPOINT ["java", "-jar", "/app/hrms-backend.jar"]
